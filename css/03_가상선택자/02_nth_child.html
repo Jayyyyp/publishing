@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            /*id fruit인 요소의 자손 li 전체 중 첫 번째*/
+            #fruit li:first-child{
+                color: royalblue;
+            }
+            /*id fruit인 자손 li 전체 중 마지막 요소에 글씨색 yellow로*/
+            #fruit li:last-child{
+                color: greenyellow;
+            }
+            /*id fruit인 자손 li 중 인덱스 5번 요소 글씨색을 파란색으로*/
+            #fruit li:nth-child(5){
+                color: blueviolet;
+            }
+            /*n에 순서대로 대입했을 때, 나오는 숫자의 위치 요소 선택하기
+                odd : 홀수
+                even : 짝수*/
+            #fruit li:nth-child(odd){
+                background-color: aqua;
+                width: fit-content;
+            }
+            #fruit li:nth-child(even){
+                background-color: burlywood;
+                width: fit-content;
+            }
+            /*not은 네거티브 적용을 한다. 해당 요소만 빼고 적용*/
+            #fruit li:not(.orange){
+                font-size: 1.5em;
+                font-style: italic;
+            }
+            
+            .main p:nth-child(3){ 
+                /*.main의 3번째 요소가 p일 경우, 해당 스타일을 적용*/
+                font-size: 1.5em;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!--ul#fruit>li*7-->
+        <ul id="fruit">
+            <li>딸기</li>
+            <li>사과</li>
+            <li class="orange">오렌지</li>
+            <li>망고</li>
+            <li>바나나</li>
+            <li>자몽</li>
+            <li>라임</li>
+        </ul>
+        <!-- emmet 생성 명령어로 만들기-->
+        <section class="main">
+            <div>hello1</div>
+            <p>hello2</p>
+            <p>hello3</p>
+            <p>hello4</p>
+            <p>hello5</p>
+            <h1>hello6</h1>
+        </section>
+
+    </body>
+</html>

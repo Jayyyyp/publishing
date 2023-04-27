@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            /*hover : 마우스가 해당 요소에 올라간 동안만 작동*/
+            a:hover{
+                font-size: 20px;
+                font-weight: 700;
+                color: magenta;
+            }
+            /*아무것도 들어가있지 않던 box에 공간 및 색상 부여*/
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+            }
+            /*.box에 마우스를 올리면 가로 200px, 배경색 green으로 처리*/
+            .box:hover{
+                width: 200px;
+                background-color: green;
+            }
+            /*active : 마우스를 클릭하고 있는 동안*/
+            .box:active{
+                height: 200px;
+                background-color: salmon;
+            }
+            /*focus : 요소에 포커싱(클릭하게 되면 클릭하는 동안 변경)*/
+            #common{
+                width: 100px;
+                outline: none;
+                padding: 5px;
+                margin-top: 20px;
+            }
+            #common:focus{
+                border-color: blue;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">안녕하세요</a>
+
+        <div class="box"></div>
+
+        <input type="text" id="common">
+    </body>
+</html>
